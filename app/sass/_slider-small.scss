@@ -1,0 +1,9 @@
+.slider-small {
+    background-color: $colorBg;
+    padding-top: 27px;
+}
+@media (min-width: 768px) {
+    .slider-small {
+        padding-top: 0;
+    }
+}

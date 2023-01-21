@@ -1,0 +1,73 @@
+.contact {
+    padding: 0 30px 30px;
+    &__text {
+        font-size: 21px;
+        line-height: 30px;
+    }
+    &__container {
+        padding: 30px 0 30px;
+        border-bottom: 4px solid $colorSeparator;
+    }
+    &__container:first-child {
+        padding: 0 0 30px;
+    }
+    &__email {
+        display: inline-block;
+        vertical-align: top;
+        margin-top: 15px;
+        font-size: 21px;
+        line-height: 30px;
+        color: $colorBlue;
+        &:hover {
+            color: $colorRed;
+        }
+    }
+    &__facebook {
+        display: flex;
+        margin-top: 30px;
+        align-items: center;
+    }
+    &__facebook:hover .contact__svg path,
+    &__facebook:hover .contact__facebook-text {
+        color: $colorRed;
+        fill: $colorRed;
+    }
+    &__facebook-text {
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: $colorBlue;
+        display: inline-block;
+        vertical-align: top;
+        padding-left: 9px;
+    }
+    &__facebook-container {
+        margin-bottom: 30px;
+    }
+}
+@media (min-width: 768px) {
+    .contact {
+        padding: 0 60px 60px;
+        &__container:first-child {
+            padding: 28px 0 30px;
+        }
+        &__facebook-container {
+            margin-bottom: 60px;
+        }
+    }
+}
+@media (min-width: 1024px) {
+    .contact {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+    }
+}
+@media (min-width: 1440px) {
+    .contact {
+        padding: 0 0 60px;
+        max-width: 1080px;
+    }
+}

@@ -1,0 +1,155 @@
+.footer {
+    background-color: $colorBg;
+    text-align: center;
+    padding: 29px 15px;
+    &__wrap {
+        border-top: 4px solid $colorSeparator;
+    }
+    &__wrap-white {
+        border-top: none;
+    }
+    &__adress {
+        color: $colorDarkBlue;
+        padding-top: 30px;
+        padding-bottom: 9px;
+    }
+    &__link {
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 15px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: $colorBlue;
+        display: inline-block;
+        vertical-align: top;
+        margin-bottom: 21px;
+    }
+    &__facebook {
+        display: block;
+        margin-bottom: 6px;
+    }
+    &__phone {
+        display: inline-block;
+        vertical-align: top;
+        font-weight: 700;
+        color: $colorDarkPurple;
+        margin-bottom: 10px;
+    }
+    &__mail {
+        display: block;
+        font-weight: 700;
+        color: $colorBlue;
+        margin-bottom: 30px;
+    }
+    &__link:hover,
+    &__mail:hover {
+        color: $colorRed;
+    }
+    &__company {
+        color: $colorText;
+    }
+    &__svg:hover path {
+        fill: $colorRed;
+    }
+    &--white {
+        padding: 0 15px 29px;
+    }
+}
+@media (min-width: 768px) {
+    .footer {
+        padding: 29px 45px 0;
+        &__wrap {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: min-content min-content; 
+            grid-auto-flow: dense;
+            align-items: center;
+            justify-content: start;
+            white-space: nowrap;
+            padding-top: 30px;
+            &-second {
+                display: grid;
+                grid-template-columns: 400px;
+                align-items: center;
+                justify-content: center;
+                white-space: nowrap;
+                padding-top: 30px;
+            }
+        }
+        &__adress {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+        &__link,
+        &__phone,
+        &__facebook,
+        &__mail {
+            margin-bottom: 0;
+        }
+        &__company {
+            grid-column: 3 / 5;
+            grid-row: 1/2;
+            justify-self: end;
+            &-second {
+                grid-column: 1 / 2;
+                grid-row: 3 / 4;
+                justify-self: center;
+                margin-bottom: 30px;
+            }
+        }
+        &__top-block,
+        &__bottom-block {
+            display: flex;
+            align-items: center;
+        }
+        &__bottom-block {
+            padding-top: 19px;
+            padding-bottom: 27px;
+        }
+        &__link::before,
+        &__phone::before,
+        &__mail::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            background-color: $colorText;
+            border-radius: 50%;
+            margin: 0px 10px 3px 10px;
+            display: inline-block;
+            vertical-align: baseline;
+        }
+        &__top-block {
+            grid-column: 1 / 3;
+            grid-row: 1 / 2;
+        }
+        &--white {
+            padding: 0 15px;
+        }
+    }
+}
+@media (min-width: 1024px) {
+    .footer {
+        padding: 29px 45px 0;
+        &__company {
+            &-second {
+                grid-column: 2 / 3;
+                grid-row: 1/2;
+                justify-self: end;
+                margin-bottom: 0;
+            }
+        }
+        &__wrap-second {
+            grid-template-columns: 1fr;
+        }
+        &--white {
+            padding: 0 45px 0;
+        }
+    }
+}
+@media (min-width: 1440px) {
+    .footer {
+        &--white {
+            padding: 0 15px 0;
+        }
+    }
+}

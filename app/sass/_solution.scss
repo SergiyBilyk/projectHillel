@@ -1,0 +1,66 @@
+.solution {
+    padding-bottom: 60px;
+    &__title {
+        font-weight: 700;
+        font-size: 38px;
+        line-height: 46px;
+        text-align: center;
+        padding-left: 30px;
+        margin-bottom: 158px;
+    }
+    &__img {
+        border: 2px solid $colorWhite;
+        border-radius: 50%;
+        opacity: 0.5;
+        width: 42px;
+        height: 42px;
+        display: block;
+        margin: 0 auto;
+        cursor: pointer;
+    }
+    &__img:hover  path {
+        fill: 2px solid $colorRed;
+        stroke: $colorRed;
+    }
+    &__img:hover {
+        border: 2px solid $colorRedOpacity;
+    }
+    &__arrow {
+        margin: 15px 0 0 9px;
+        opacity: 1;
+    }
+    &__arrow:hover path {
+        stroke: $colorRed;
+    }
+}
+@media (min-width: 768px) {
+    .solution {
+        padding-top: 134px;
+        padding-bottom: 40px;
+        &__title {
+            padding: 0px 0 258px;
+        }
+        &__img {
+            margin-bottom: 50px;
+        }
+    }
+}
+@media (min-width: 1024px) {
+    .solution {
+        padding-top: 112px;
+        &__title {
+            padding: 0px 0 130px;
+        }
+        &__img {
+            margin-bottom: 50px;
+        }
+    }
+}
+@media (min-width: 1440px) {
+    .solution {
+        padding-top: 129px;
+        &__title {
+            padding: 0px 0 146px;
+        }
+    }
+}

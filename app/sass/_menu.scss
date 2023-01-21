@@ -1,0 +1,171 @@
+.menu {
+    align-self: center;
+    border: none;
+    padding: 0;
+    margin: -4px 0 0;
+    z-index: 5;
+    &__body-btn {
+        padding: 0;
+        border: 0;
+        border-radius: 12px;
+        height: 32px;
+        width: 35px;
+        background-color: transparent;
+        cursor: pointer;
+        position: relative;
+    }
+    &__btn {
+        display: block;
+        position: absolute;
+        width: 18px;
+        height: 2px;
+        background-color: $colorDarkBlue;
+        right: 7px;
+        top: 14px;
+        transition: 0.3s;
+        &-white {
+            background-color: $colorWhite; 
+        }
+    }
+    &__btn:nth-child(1) {
+        top: 7px;
+    }
+    &__btn:nth-child(2) {
+        top: 14px;
+    }
+    &__btn:nth-child(3) {
+        top: 21px;
+    }
+    &__body-btn:active.show {
+        background: $colorSeparator;
+    }
+    &__body-btn.show .menu__btn:nth-child(1) {
+        transform: rotate(45deg);
+        transform-origin: bottom left;
+        top: 8px;
+        background: $colorRed;
+    }
+    &__body-btn.show .menu__btn:nth-child(2) {
+        transform: scale(0);
+    }
+    &__body-btn.show .menu__btn:nth-child(3) {
+        transform: rotate(-45deg);
+        transform-origin: top left;
+        background: $colorRed;
+        top: 22px;
+    }
+    &__lists {
+        position: fixed;
+        top: 103px;
+        right: 0px;
+        background-color: $colorWhite;
+        padding: 12px;
+        width: 100%;
+        right: -800px;
+        &.show {
+            transition: 0.3s;
+            right: 0px;
+        }
+    }
+    &__list {
+        list-style-type: none;
+        margin: 0 0 15px 0;
+    }
+    &__list:last-child {
+        margin: 0;
+    }
+    &__link {
+        display: block;
+        background: $colorBg;
+        border-radius: 12px;
+        font-weight: 700;
+        text-align: center;
+        padding: 7px;
+        color: $colorBlue;
+        font-size: 24px;
+        line-height: 29px;
+        &:active {
+            background: $colorSeparator;
+        }
+        &-white {
+            color: $colorBlue;
+        }
+        &-active {
+            color: $colorRed;
+        }
+    }
+}
+@media (min-width: 768px) {
+    .menu {
+        margin: -4px 0 0;
+        &__body-btn {
+            display: none;
+        }
+        &__lists {
+            display: flex;
+            justify-content: flex-start;
+            position: static;
+            padding: 0;
+            background: transparent;
+            height: auto;
+        }
+        &__list {
+            list-style-type: none;
+            margin-right: 16px;
+            padding: 0;
+            margin-bottom: 0;
+            &__list:last-child {
+                margin: 0;
+            }
+        }
+        &__link {
+            display: inline;
+            font-size: 16px;
+            color: $colorWhite;
+            background: transparent;
+            padding: 0;
+            border-radius: 0;
+            &:hover {
+                padding-bottom: 3px;
+                border-bottom: 2px solid $colorWhite;
+            }
+            &:active {
+                padding-bottom: 3px;
+                border-bottom: 2px solid $colorWhite;
+                background: transparent;
+            }
+            &-white {
+                color: $colorBlue;
+                &:hover {
+                    padding-bottom: 3px;
+                    border-bottom: 2px solid $colorBlue;
+                }
+                &.menu__link-active {
+                    border-bottom: 2px solid $colorRed;
+                }
+            }
+            &-active {
+                color: $colorRed;
+                align-self: stretch;
+                padding-bottom: 3px;
+                border-bottom: 2px solid $colorRed;
+            }
+            &.menu__link-active {
+                border-bottom: 2px solid $colorRed;
+            }
+        }
+    }
+}
+@media (min-width: 1024px) {
+    .menu {
+        grid-column: 2 / 4;
+        grid-row: 2 / 3;
+        justify-self: end;
+        &__list {
+        margin: 5px 0 0 16px;
+        }
+        &__list:last-child {
+            margin: 5px 0 0 16px;
+        }
+    }
+}

@@ -1,0 +1,91 @@
+.publications {
+    background-color: $colorBg;
+    padding: 28px 15px 0;
+    &__main-link {
+        margin: 3px 0 2px;
+    }
+    &__containers {
+        display: grid;
+        row-gap: 30px;
+        font-size: 20px;
+        margin-top: 30px;
+    }
+    &__container {
+        background-color: $colorWhite;
+        border-radius: 8px;
+    }
+    &__wrap {
+        padding: 28px 30px 30px;
+    }
+    &__img {
+        width: 100%;
+        height: 200px;
+        border-radius: 8px 8px 0px 0px;
+        object-fit: cover;
+        background-color: $colorGrey03;
+    }
+    &__title {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 20px;
+        color: $colorBlue;
+        margin-bottom: 15px;
+        display: inline-block;
+        vertical-align: top;
+    }
+    &__title:hover {
+        color: $colorBlueActive;
+    }
+    &__date {
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 15px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: $colorText;
+        border-bottom: 4px solid $colorSeparator;
+        padding-bottom: 15px;
+    }
+    &__text {
+        padding-top: 15px;
+        font-size: 14px;
+        line-height: 22px;
+        color: $colorBlack;
+    }
+}
+@media (min-width: 768px) {
+    .publications {
+        padding: 30px 45px 0 45px;
+        &__main-title {
+            margin-top: 6px;
+        }
+        &__containers {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr auto;
+            gap: 30px;
+            }
+        &__container:last-child {
+            grid-column: 1 / 3;
+            grid-row: 2 / 3;
+            height: fit-content;
+        }
+        &__wrap {
+            padding: 27px 30px 30px;
+        }
+    }
+}
+@media (min-width: 1024px) {
+    .publications {
+        padding: 30px 45px 0 45px;
+        &__containers {
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: auto;
+            gap: 30px;
+        }
+        &__container:last-child {
+            grid-column: 3 / 4;
+            grid-row: 1 / 2;
+            height: 100%;
+        }
+    }
+}

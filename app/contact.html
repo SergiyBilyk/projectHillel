@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Contact</title>
+</head>
+<body class="body body--white">
+    <div class="container">
+        <header class="header header-white">
+            <div class="header__top-line header-white__top-line">
+                <ul class="header__language">
+                    <li><a class="header__language-list header-white__language-list">ук</a></li>
+                    <li><a class="header__language-list header-white__language-list">ру</a></li>
+                    <li><a class="header__language-list header-white__language-list active-lenguage-white">en</a></li>
+                </ul>
+                <div class="header__adress">Kyiv, Mechnikova str., 14/1</div>
+                <a class="header__phone header-white__phone" href="tel:0800211927">0800 211 927</a>
+                <a class="header__fb" href="#" aria-label="Link to facebook">
+                    <svg class="header__svg header__svg-white" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M24 12.5733C24 5.90541 18.6274 0.5 12 0.5C5.37258 0.5 0 5.90541 0 12.5733C0 18.5995 4.38823 23.5943 10.125 24.5V16.0633H7.07813V12.5733H10.125V9.91343C10.125 6.88755 11.9165 5.21615 14.6576 5.21615C15.9705 5.21615 17.3438 5.45195 17.3438 5.45195V8.42313H15.8306C14.3399 8.42313 13.875 9.35379 13.875 10.3086V12.5733H17.2031L16.6711 16.0633H13.875V24.5C19.6118 23.5943 24 18.5995 24 12.5733Z" fill="white"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="header__logo-box">
+                <a href="index.html" class="header__logo"><img class="header__logo-img" src="./img/logo-white.svg" alt="logo" aria-label="Logotype, link to main page"></a>
+                <div class="header__breadcrumbs header__breadcrumbs-active">contact</div>
+            </div>
+            <nav class="menu">
+                <button class="menu__body-btn" type="button">
+                    <span class="menu__btn"></span>
+                    <span class="menu__btn"></span>
+                    <span class="menu__btn"></span>
+                </button>
+                <ul class="menu__lists">
+                    <li class="menu__list"><a class="menu__link menu__link-white" href="about.html">about us</a></li>
+                    <li class="menu__list"><a class="menu__link menu__link-white" href="services.html">services</a></li>
+                    <li class="menu__list"><a class="menu__link menu__link-white" href="team.html">team</a></li>
+                    <li class="menu__list"><a class="menu__link menu__link-white" href="#">publications</a></li>
+                    <li class="menu__list"><a class="menu__link menu__link-white menu__link-active" href="contact.html">contact</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+<main class="main">
+    <div class="overlay"></div>
+    <section class="contact container">
+        <div class="contact__wrap">
+            <div class="contact__container">
+                <p class="contact__text">Kyiv,</p>
+                <p class="contact__text">Mechnikova str, 14</p>
+            </div>
+            <div class="contact__container">
+                <p class="contact__text">0800 211 927</p>
+                <a class="contact__email" href="mailto:contact@forstudy.space">contact@forstudy.space</a>
+            </div>
+            <div class="contact__facebook-container">
+                <a class="contact__facebook" href="#" aria-label="Link to facebook">
+                    <svg class="contact__svg" width="39" height="38" viewBox="0 0 39 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M38.5 19.1161C38.5 8.55857 29.9934 0 19.5 0C9.00658 0 0.5 8.55857 0.5 19.1161C0.5 28.6575 7.44803 36.5659 16.5312 38V24.6419H11.707V19.1161H16.5312V14.9046C16.5312 10.1136 19.3678 7.46723 23.7078 7.46723C25.7866 7.46723 27.9609 7.84059 27.9609 7.84059V12.545H25.5651C23.2048 12.545 22.4688 14.0185 22.4688 15.5302V19.1161H27.7383L26.8959 24.6419H22.4688V38C31.552 36.5659 38.5 28.6575 38.5 19.1161Z" fill="#24A3FF"/>
+                    </svg>
+                    <span class="contact__facebook-text">Our page<br>on facebook</span>
+                </a>
+            </div>
+        </div>
+        <div class="popup popup--white">
+            <div class="popup__header">
+                <h1 class="title title--popup">We would like to help you</h1>
+                <span class="popup__navigation"></span>
+            </div>
+            <form class="popup__form" method="post">
+                <p>
+                    <label>
+                        <input class="popup__input" type="text" placeholder="Name"  name="name">
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <textarea class="popup__input popup__input-message" placeholder="Message" name="message"></textarea>
+                    </label>
+                </p>
+                <h2 class="popup__title">How to answer you?</h2>
+                <p>
+                    <label>
+                        <input class="popup__input" type="tel" name="phone" placeholder="Phone number" >
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input class="popup__input" type="email" name="email" placeholder="Email" >
+                    </label>
+                </p>
+                <p class="popup__paragraf">
+                    <input class="popup__input popup__button" name="button" type="submit" value="Send message">
+                </p>
+            </form>
+        </div>
+    </section>
+</main>
+<footer class="footer footer--white">
+    <div class="container">
+        <div class="footer__wrap footer__wrap-white footer__wrap-second">
+            <div class="footer__top-block footer__top-second"> 
+                <p class="footer__adress">Kyiv, Mechnikova str., 14/1</p>
+                <a class="footer__link" href="#">On map</a>
+            </div>
+            <div class="footer__bottom-block footer__bottom-second">
+                <a class="footer__facebook" href="#" aria-label="Link to facebook">
+                    <svg class="footer__svg" width="39" height="38" viewBox="0 0 39 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M38.5 19.1161C38.5 8.55857 29.9934 0 19.5 0C9.00658 0 0.5 8.55857 0.5 19.1161C0.5 28.6575 7.44803 36.5659 16.5312 38V24.6419H11.707V19.1161H16.5312V14.9046C16.5312 10.1136 19.3678 7.46723 23.7078 7.46723C25.7866 7.46723 27.9609 7.84059 27.9609 7.84059V12.545H25.5651C23.2048 12.545 22.4688 14.0185 22.4688 15.5302V19.1161H27.7383L26.8959 24.6419H22.4688V38C31.552 36.5659 38.5 28.6575 38.5 19.1161Z" fill="#24A3FF"/>
+                    </svg>
+                </a>
+                <a class="footer__phone" href="tel:0800211927">0800 211 927</a>
+                <a class="footer__mail" href="mailto:contact@forstudy.space">contact@forstudy.space</a>
+            </div>
+            <p class="footer__company footer__company-second">© 2021 HLEGAL Law company, LLC</p>
+        </div>
+    </div>
+</footer>
+<script src="./js/all.js"></script>
+</body>
+</html>

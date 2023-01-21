@@ -1,0 +1,11 @@
+.active {
+    &-lenguage {
+        background: $colorRed;
+        border-radius: 8px;
+        &-white {
+            background: $colorRed;
+            color: $colorWhite;
+            border-radius: 8px;
+        }
+    }
+}

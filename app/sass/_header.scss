@@ -1,0 +1,173 @@
+.header {
+    display: grid;
+    grid-template-columns: 1fr min-content;
+    grid-template-rows: max-content max-content;
+    margin-bottom: 134px;
+    position: relative;
+    z-index: 5;
+    &__top-line {
+        height: 45px;
+        background: $colorGrey02;
+        margin: 0 -15px 11px;
+        padding: 0 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        grid-column: 1 / -1;
+    }
+    &__language {
+        list-style-type: none;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 15px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        display: flex;
+        padding: 0;
+    }
+    &__language-list {
+        border-radius: 8px;
+        padding: 5px 7px;
+        cursor: pointer;
+    }
+    &__language-list:hover {
+        background: $colorOpacityWhite;
+    }
+    &__language-list.active-lenguage {
+        background: $colorRed;
+    }
+    &__adress,
+    &__fb {
+        display: none;
+    }
+    &__phone {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 20px;
+    }
+    &__bottom-line {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__svg-white path {
+        fill: $colorText;
+    }
+    &__svg:hover path {
+        fill: $colorRed;
+    }
+    &__logo-box {
+        display: inline-flex;
+        align-items: center;
+        margin-top: 4px;
+    }
+    &__breadcrumbs {
+        display: inline-flex;
+        align-items: center;
+        padding-bottom: 13px;
+        font-size: 20px;
+        line-height: 24px;
+        color: $colorDarkBlue;
+        &-active::before {
+            content: '';
+            width: 11px;
+            height: 26px;
+            margin: 0 3px 0 4px;
+            background: url(../img/logo_slash.svg) no-repeat center center ;
+        }
+        &-white {
+            color: $colorWhite;
+        }
+    } 
+    &--services {
+        margin-bottom: 33px;
+    } 
+}
+@media (min-width: 768px) {
+    .header {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, min-content);
+        padding: 41px 45px 0;
+        &__top-line {
+            background: none;
+            justify-content: flex-start;
+            margin: 0 -15px 21px;
+        }
+        &__line-white {
+            margin: 0 -15px 19px;
+        }
+        &__logo-box {
+            margin: 0 0 24px;
+        }
+        &__phone,
+        &__adress,
+        &__fb {
+            display: flex;
+            align-items: center;
+        }
+        &__adress::before,
+        &__phone::before,
+        &__fb::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            background-color: $colorSeparator;
+            border-radius: 50%;
+            margin: 0 6px;
+            display: inline-block;
+            vertical-align: top;
+        }
+        &__logo-img {
+            height: 60px;
+            width: 130px;
+        }
+        &__breadcrumbs {
+            padding-bottom: 20px;
+            font-size: 36px;
+            line-height: 44px;
+            &-active::before {
+                width: 21px;
+                height: 47px;
+                margin: 0 3px 0 4px;
+                background-size: 36px 44px;
+            }
+        }
+        &--services {
+            margin-bottom: 60px;
+        }
+    }
+}
+@media (min-width: 1024px) {
+    .header {
+        grid-template-columns: max-content 1fr 1fr;
+        grid-template-rows: repeat(2, auto);
+        &__top-line {
+            grid-column: 2 / 4;
+            grid-row: 1 / 2;
+            justify-self: end;
+            margin: 0 -15px 0;
+        }
+        &__logo-box {
+            grid-column: 1 / 2;
+            grid-row: 1 / -1;
+            margin: 0;
+        }
+        &__logo-img{
+            margin-top: 9px;
+            margin-left: 2px;
+        }
+        &__breadcrumbs {
+            padding-bottom: 10px;
+            &-active::before {
+                margin: 1px 3px 0 2px;
+            }
+        }
+        &--services {
+            margin-bottom: 1px;
+        }   
+    }
+}
+@media (min-width: 1440px) {
+    .header {
+        padding: 41px 0 0;
+    }
+}

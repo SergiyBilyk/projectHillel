@@ -1,0 +1,195 @@
+.slider {
+    padding: 0 30px;
+    &__title-about {
+        margin: 0 0 30px;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: $colorDarkBlue;
+        text-align: center;
+    }
+    &__img {
+        height: 500px;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 12px 12px 0px 0px;
+        background-color: $colorGrey03;
+    }
+    &__container {
+        background-color: $colorBg;
+        padding: 30px;
+        border-radius:  0px 0px 12px 12px;
+        &-about {
+            padding: 30px 30px 0;
+            border-radius: 0px;
+        }
+    }
+    &__link {
+        margin-bottom: 5px;
+    }
+    &__title {
+        margin-bottom: 30px;
+        word-wrap: break-word;
+        word-break: break-word;
+    }
+    &__name {
+        font-weight: 700;
+        line-height: 20px;
+        color: $colorText;
+        margin-bottom: 5px;
+    }
+    &__position {
+        font-size: 14px;
+        line-height: 22px;
+        color: $colorText;
+    }
+    &__about-wrap {
+        padding: 0 30px;
+    }
+    &__about-item {
+        background-color: $colorWhite;
+        border-radius: 12px;
+        height: 90px;
+        display: none;
+        align-items: center;
+        justify-content: center;
+    }
+    &__about-img {
+        height: 40px;
+    }
+    &__about-item:first-child {
+        display: flex;
+    }
+    & .slick-dots {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        padding: 0;
+        & li {
+            list-style: none;
+            &.slick-active button {
+                opacity: 1;
+            }
+        }
+        & button {
+            font-size: 0;
+            width: 16px;
+            height: 16px;
+            margin: 30px 0 0;
+            background-color: $colorBlue;
+            border: none;
+            opacity: 0.2;
+            border-radius: 100%;
+            &:hover {
+                opacity: 0.6;
+            }
+        }
+    }
+    &--about {
+        padding: 0;
+    }
+}
+@media (min-width: 500px) {
+    .slider {
+        &__about-wrap {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            padding: 0;
+        }
+        &__about-item:nth-child(2) {
+            display: flex;
+        }
+    }
+}
+@media (min-width: 768px) {
+    .slider {
+        padding: 30px 60px;
+        &__container {
+            &-about{
+                padding: 30px 60px 0;
+            }
+        }
+        &__about-item {
+            display: flex;
+            padding: 0;
+        }
+        &__about-wrap {
+            grid-template-columns: repeat(4, 1fr);
+        }
+        &--about {
+            padding: 0;
+        }
+        &--padding {
+            padding-bottom: 0;
+        }
+    }
+}
+@media (min-width: 1024px) {
+    .slider {
+        padding: 30px 60px 30px;
+        max-width: 1320px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: min-content min-content;
+        &__wrap {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+        &__container {
+            margin: 0 0 0 400px;
+            padding: 29px;
+            border-radius:  0px 12px 12px 0px;
+            &-about {
+                margin: 0;
+                padding: 28px 60px 0px;
+                border-radius: 0;
+            }
+        }
+        &__img {
+            width: 400px;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 12px 0px 0px 12px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        &__about-img {
+            height: 60px;
+        }
+        &__about-item {
+            height: 110px;
+        }
+        &--about {
+            padding: 0;
+        }
+        &--padding {
+            padding-bottom: 0;
+        }
+    }
+}
+@media (min-width: 1440px) {
+    .slider {
+        padding: 30px 0px;
+        &__container {
+            &-about {
+                padding: 0;
+            }
+        }
+        &__wrap {
+            display: flex;
+            position: relative;
+        }
+        &--about {
+            padding: 28px 0 0;
+        }
+        &--padding {
+            padding-bottom: 0;
+        }
+    }
+}

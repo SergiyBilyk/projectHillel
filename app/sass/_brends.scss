@@ -1,0 +1,118 @@
+.brends {
+    &__title {
+        margin: 62px 0 30px;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: $colorDarkBlue;
+        text-align: center;
+        &-white {
+            margin: 80px 0 30px;
+        }
+    }
+    &__logos {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    &__logo {
+        height: auto;
+        width: auto;
+    }
+    &__logo-1,
+    &__logo-2,
+    &__logo-3,
+    &__logo-4,
+    &__logo-5,
+    &__logo-6,
+    &__logo-7,
+    &__logo-8,
+    &__logo-9,
+    &__logo-10,
+    &__logo-11,
+    &__logo-12 {
+        height: 120px;
+        width: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__logo-1 {
+        background-color: $colorLogo1;
+    }
+    &__logo-2 {
+        background-color: $colorLogo2;
+    }
+    &__logo-3 {
+        background: $colorLogo3;
+    }
+    &__logo-4 {
+        background-color: $colorLogo4;
+    }
+    &__logo-5 {
+        background-color: $colorLogo5;
+    }
+    &__logo-6 {
+        background-color: $colorLogo6;
+    }
+    &__logo-7 {
+        background-color: $colorLogo7;
+    }
+    &__logo-8 {
+        background-color: $colorLogo8;
+    }
+    &__logo-9 {
+        background-color: $colorLogo9;
+    }
+    &__logo-10 {
+        background-color: $colorLogo10;
+    }
+    &__logo-11 {
+        background-color: $colorLogo11;
+    }
+    &__logo-12 {
+        background-color: $colorLogo12;
+    }
+    &__logo-7,
+    &__logo-8,
+    &__logo-9,
+    &__logo-10,
+    &__logo-11,
+    &__logo-12 {
+        display: none;
+    }
+}
+@media (min-width: 768px) {
+    .brends {
+        &__logo-7,
+        &__logo-8,
+        &__logo-9,
+        &__logo-10,
+        &__logo-11,
+        &__logo-12 {
+            display: flex;
+        }
+        &__logos {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        &__title {
+            margin: 30px 0 30px;
+            &-about {
+                margin: 3px 0 30px;
+            }
+            &-white {
+                margin: 80px 0 30px;
+            }
+        }
+    }
+}
+@media (min-width: 1024px) {
+    .brends {
+        max-width: 1440px;
+        margin: 0 auto;
+        &__logos {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+}
