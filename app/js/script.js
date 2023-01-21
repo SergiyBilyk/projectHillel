@@ -1,7 +1,7 @@
-const burger = document.querySelector(".menu__body-btn")
-const menu = document.querySelector(".menu__lists")
-const overlay = document.querySelector(".overlay")
-const body = document.querySelector("body")
+var burger = document.querySelector(".menu__body-btn")
+var menu = document.querySelector(".menu__lists")
+var overlay = document.querySelector(".overlay")
+var body = document.querySelector("body")
 
 burger.addEventListener("click", function () {
     menu.classList.toggle("show")
@@ -17,8 +17,8 @@ overlay.addEventListener("click", function () {
     body.classList.toggle("stop-scroll")
 })
 
-const tabButton = document.querySelectorAll(".tab__button")
-const tabText = document.querySelectorAll(".tab__box")
+var tabButton = document.querySelectorAll(".tab__button")
+var tabText = document.querySelectorAll(".tab__box")
 
 tabButton.forEach(function (button, index) {
     button.addEventListener('click', function () {
