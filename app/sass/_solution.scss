@@ -33,6 +33,16 @@
         stroke: $colorRed;
     }
 }
+@media (min-width: 420px) {
+    .solution {
+        padding-bottom: 75px;
+    }
+}
+@media (min-width: 610px) {
+    .solution {
+        padding-bottom: 125px;
+    }
+}
 @media (min-width: 768px) {
     .solution {
         padding-top: 134px;
